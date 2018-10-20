@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "546948589038",
+    "project_id": "background-voice-recorder"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546948589038:android:36cf2fbee0e15b43",
+        "android_client_info": {
+          "package_name": "thanhnguyen.com.backgroundvoicerecorder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546948589038-2gqi8if5sd51r6je983bs6r62peb5ijb.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "546948589038-8kga5nabp2hdoo020njrtm5k4igleene.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "thanhnguyen.com.backgroundvoicerecorder",
+            "certificate_hash": "5d9ca0f047277e396c596e2080bb2dfa5ee2ccb7"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl2og_0cu0c2x5vK1XllpiOpWq2xgv1UA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

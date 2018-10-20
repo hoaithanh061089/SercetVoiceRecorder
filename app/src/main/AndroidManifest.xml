@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="thanhnguyen.com.backgroundvoicerecorder">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="thanhnguyen.com.backgroundvoicerecorder.ApplicationAppClass"
+        android:theme="@style/AppTheme">
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.HomeScreenActivity"
+            android:excludeFromRecents="true">
+        </activity>
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.lockpattern.SetPatternActivity_Setting" />
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.lockpattern.ConfirmPatternActivity_Setting" />
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.lockpattern.PinLockView_Setting" />
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.location.VideoGPSLocation" />
+        <activity android:name="za.co.riggaroo.materialhelptutorial.tutorial.MaterialTutorialActivity"/>
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.StartupActivity"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="thanhnguyen.com.backgroundvoicerecorder.cameraservice.StartServiceActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.Transparent"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+
+        <service android:name="thanhnguyen.com.backgroundvoicerecorder.cameraservice.AudioBackgroundService">
+
+
+        </service>
+        <receiver android:name="thanhnguyen.com.backgroundvoicerecorder.utility.KeyPadListener">
+            <intent-filter >
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCl2og_0cu0c2x5vK1XllpiOpWq2xgv1UA" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
